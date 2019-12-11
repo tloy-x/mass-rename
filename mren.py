@@ -8,7 +8,6 @@ import argparse
 parser = argparse.ArgumentParser(usage='mren.py filetpe newname [-h] [-v] [-n <int>]', description='rename all files of chosen type in a directory.')
 parser.add_argument('filetype', type=str, help='choose filetype for all the files you want to rename.')
 parser.add_argument('newname', type=str, help='choose new name for all files chosen.')
-
 parser.add_argument('-v', '--verbose', action='store_true', help='make output verbose.')
 parser.add_argument('-n', '--number', type=int, metavar='<int>', help='set number of placeholder digits in filenumber. default is 4. maximum is 10.')
 parser.add_argument('-d','--directory', type=str, metavar='<directory>', help='Specify a directory. Default is current working directory.')
@@ -18,7 +17,6 @@ ftype = args.filetype
 
 if args.filetype[0] == '.':
     args.filetype = args.filetype[1:]
-
 
 os.chdir(os.getcwd())
 if args.directory is not None:
@@ -46,4 +44,3 @@ for i in files:
    if args.verbose:
        print(f"Renaming {i} to {args.newname + str(filenum)}.{args.filetype}")
 print('Done')
-
