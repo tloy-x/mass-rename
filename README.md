@@ -1,2 +1,2 @@
-#Mass-Renamer
+# Mass-Renamer
 Simple python mass-renamer
