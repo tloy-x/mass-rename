@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(usage='mren filetype newname [-h] [-v] [-n <int
 parser.add_argument('filetype', type=str, help='choose filetype for all the files you want to rename')
 parser.add_argument('newname', type=str, help='choose new name for all files chosen')
 parser.add_argument('-v', '--verbose', action='store_true', help='make output verbose')
-parser.add_argument('-V', '--version', action='version', version='mren 1.0', help='show program\'s version number and exit')
+parser.add_argument('-V', '--version', action='version', version='mren 1.1', help='show program\'s version number and exit')
 parser.add_argument('-n', '--number', type=int, metavar='<int>', help='set number of placeholder digits in filenumber. default is 4, maximum is 10')
 parser.add_argument('-d','--directory', type=str, metavar='<directory>', help='specify a directory. Default is current working directory')
 args = parser.parse_args()
