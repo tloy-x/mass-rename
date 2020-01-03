@@ -5,7 +5,7 @@ import glob
 import sys
 import argparse
 
-parser = argparse.ArgumentParser(usage='mren filetype newname [-h] [-v] [-n <int>]', description='rename all files of chosen type in a directory')
+parser = argparse.ArgumentParser(usage='mren filetype newname [-h] [-v] [-n <int>] [-d <directory>]', description='rename all files of chosen type in a directory')
 parser.add_argument('filetype', type=str, help='choose filetype for all the files you want to rename')
 parser.add_argument('newname', type=str, help='choose new name for all files chosen')
 parser.add_argument('-v', '--verbose', action='store_true', help='make output verbose')
