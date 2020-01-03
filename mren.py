@@ -34,7 +34,7 @@ digitVal = args.number
 if args.number is None:
     digitVal = 4
 elif args.number > 10:
-    parser.error('-n must be 10 or less. Come on.')
+    parser.error('-n must be 10 or less.')
 elif args.number < 1:
     parser.error('-n must be greater than 0.')
 
@@ -46,5 +46,8 @@ for i in files:
    filenum = str(count).zfill(digitVal)
    os.rename(i, args.newname + str(filenum) + '.' + args.filetype)
    if args.verbose:
-       print(f"Renaming {i} to {args.newname + str(filenum)}.{args.filetype}...")
-print('\nDone')
+       print(f"Renaming {i} to {args.newname + str(filenum)}.{args.filetype}...")       
+if args.verbose:
+    print('\nDone')
+else:
+    print('Done')
