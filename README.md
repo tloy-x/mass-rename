@@ -2,7 +2,7 @@
 Simple python mass-renamer
 
 ```
-usage: mren.py filetpe newname [-h] [-v] [-n <int>]
+usage: mren.py filetpe newname [-h] [-v] [-n <int>] [-d <directory>]
 
 rename all files of chosen type in a directory.
 
