@@ -14,8 +14,6 @@ parser.add_argument('-n', '--number', type=int, metavar='<int>', help='set numbe
 parser.add_argument('-d','--directory', type=str, metavar='<directory>', help='specify a directory. Default is current working directory')
 args = parser.parse_args()
 
-ftype = args.filetype
-
 if args.filetype[0] == '.':
     args.filetype = args.filetype[1:]
 
@@ -24,7 +22,6 @@ if args.directory is not None:
     os.chdir(args.directory)
 
 files = []
-
 count = 0
 
 if args.verbose: 
@@ -47,7 +44,5 @@ for i in files:
    os.rename(i, args.newname + str(filenum) + '.' + args.filetype)
    if args.verbose:
        print(f"Renaming {i} to {args.newname + str(filenum)}.{args.filetype}...")       
-if args.verbose:
-    print('\nDone')
-else:
-    print('Done')
+
+print("\nDone" if args.verbose else "Done")
